@@ -1,4 +1,5 @@
-function ModalInstanceCtrl($uibModalInstance) {
+// Uncomment the 'cellVal' parameter to receive 'cellCtrl.cellVal' from 'CellCtrl'.
+function ModalInstanceCtrl($uibModalInstance/**, cellVal*/) {
 	
 	this.$onInit = function() {
 		this.uibModalInstanceService_ = $uibModalInstance;
