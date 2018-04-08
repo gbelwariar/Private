@@ -9,7 +9,7 @@ function CellCtrl($uibModal) {
 
 CellCtrl.prototype.open = function () {
 	/** 
-	 *  Uncomment the below line to send 'cellVal' to the modal dialog.
+	 *  Uncomment the below line to pass 'cellVal' to the 'ModalInstanceCtrl'.
 	 *		let vm = this;
 	 */
 	let modalInstance = this.uibModalService_.open({
@@ -17,7 +17,7 @@ CellCtrl.prototype.open = function () {
 		controller: 'ModalInstanceCtrl',
 		controllerAs: 'modalCtrl',
 		/**
-		 * Uncomment the below line to send 'cellVal' to the modal dialog.
+		 * Uncomment the below line to pass 'cellVal' to the 'ModalInstanceCtrl'.
 		 *   resolve: {
 		 *		 cellVal: function () {
 		 *			 return vm.cellVal;
