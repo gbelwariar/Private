@@ -8,11 +8,22 @@ function CellCtrl($uibModal) {
 
 
 CellCtrl.prototype.open = function () {
-	let vm = this;
+	/** 
+	 *  Uncomment the below line to send 'cellVal' to the modal dialog.
+	 *		let vm = this;
+	 */
 	let modalInstance = this.uibModalService_.open({
 		templateUrl: 'cell/modal/modal.html',
 		controller: 'ModalInstanceCtrl',
 		controllerAs: 'modalCtrl',
+		/**
+		 * Uncomment the below line to send 'cellVal' to the modal dialog.
+		 *   resolve: {
+		 *		 cellVal: function () {
+		 *			 return vm.cellVal;
+		 *		 }
+		 *	 }
+		 */
 	});
 	modalInstance.result.then((function (cellVal) {
 		if (!isNaN(cellVal) && cellVal !== undefined) {
