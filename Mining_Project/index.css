@@ -1,0 +1,142 @@
+.body {
+	background-color: #F5F5DC;
+}
+
+.align-text-center {
+	text-align: center;
+}
+
+.heading-message {
+  font-size: 30px;
+	color: black;
+	font-family: Impact, Charcoal, sans-serif;
+}
+
+.vertical-separator-from-top-50 {
+	margin-top: 50px;
+}
+
+.vertical-separator-from-top-10 {
+	margin-top: 10px;
+}
+
+.font-size-18{
+  font-size: 18px;
+}
+
+.font-size-20 {
+	font-size: 20px;
+}
+
+.font-size-30 {
+	font-size: 30px;
+}
+
+.font-size-50 {
+	font-size: 50px;
+}
+
+.white-text {
+	color: white
+}
+
+.red-text {
+	color: red
+}
+
+.blue-text {
+	color: blue
+}
+
+.garamond-text {
+	font-family: Garamond, Georgia, serif;;
+}
+
+.open-sans-sans-serif-text {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.arial-black-text {
+	font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+.comic-sans-ms-text {
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.button {
+	font-family: 'Raleway',sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	border: 2px solid #3368FF;
+	border-radius: 15px;
+	display: inline-block;
+	padding: 12px 12px;
+	cursor: pointer;
+	color: #000000;
+	background-color: #663366;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.dark-orange-background {
+	background-color: #FF8C00;
+}
+
+.black-background {
+	background-color: black;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button:hover, .button:active , .hover-effect:hover, .hover-effect:active {
+  background: yellow;
+}
+
+.card {
+	position: relative;
+  border: 25px solid #FA8072;
+  padding: 25px;
+	border-radius: 25px;
+  margin: auto;
+	width: 500px;
+	display: table;
+}
+
+.card-border-10px {
+	border: 10px solid black;
+}
+
+input[type=text] {
+	width: 200px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}

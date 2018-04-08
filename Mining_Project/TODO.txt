@@ -1,0 +1,27 @@
+Requirements - 
+
+1) Check if some text is to be changed.
+
+
+Development - 
+
+1) Apply styles - 
+		a) Reduce the size of the input textbox.
+		b) Add a background color/image.
+		c) Change the font-style/size of the texts.
+		d) Change the appearance of the buttons.
+		
+Important links - 
+
+1) Mainpulating the square CSS - http://jsfiddle.net/Rc9fa/1561/
+2) See the dialog - http://adamalbrecht.com/2013/12/12/creating-a-simple-modal-dialog-directive-in-angular-js/
+
+3) Plunks for dialog - 
+		https://plnkr.co/edit/754Cy9PujUepJXfM5Ho0?p=preview
+		https://plnkr.co/edit/754Cy9PujUepJXfM5Ho0?p=preview
+		
+4) element[0].querySelectorAll(".list-scrollable")[0].innerHTML;
+Getting the value of the firsts child element among all the 
+elements with class = 'list-scrollable'
+
+http://jsfiddle.net/xogg05au/2/

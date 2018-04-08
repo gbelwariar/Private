@@ -1,0 +1,43 @@
+<matrix>
+	<div class='align-text-center font-size-18'>
+		<button class='button' ui-sref='home'>Home</button>
+		<div>
+			<form name='slidingWindowDetailsForm'>		
+					<div>
+						<label for="number-of-rows" class='font-size-18'>Number of rows in window</label>
+						<input name='numberOfRows' id="number-of-rows" type='text'
+								placeholder='Must be less than {{matrixCtrl.matrix.numberOfRows}}' pattern='^\s*\d+\s*$'
+								ng-required='true' ng-model='matrixCtrl.slidingWindow.numberOfRows'/>
+					</div>
+					<div>
+						<label for="number-of-cols" class='font-size-18'>Number of cols in window</label>
+						<input name='numberOfCols' id="number-of-cols" type='text'
+								placeholder='Must be less than {{matrixCtrl.matrix.numberOfCols}}' pattern='^\s*\d+\s*$'
+								ng-required='true' style='margin-left: 5px' ng-model='matrixCtrl.slidingWindow.numberOfCols'/>
+					</div>
+					<div>
+						<button class='button dark-orange-background' ng-click='slidingWindowDetailsForm.$valid && analyze()'
+								ng-disabled='slidingWindowDetailsForm.numberOfRows.$error.required ||
+														 slidingWindowDetailsForm.numberOfCols.$error.required'>
+							Analyze
+						</button>
+					</div>
+			</form>
+		</div>
+		<div ng-if="matrixCtrl.slidingWindowStatus==='MOVING' || matrixCtrl.slidingWindowStatus==='HALTED'"
+				class='font-size-30 card card-border-10px'>
+			<div ng-if="matrixCtrl.slidingWindowStatus==='MOVING'">
+				<span class='arial-black-text'>Sum:</span>
+				<span class='comic-sans-ms-text red-text'>{{matrixCtrl.valToShowInsideCard}}</span>
+			</div>
+			<div ng-if="matrixCtrl.slidingWindowStatus==='HALTED'">
+				<span class='arial-black-text'>Maximum Sum:</span>
+				<span class='comic-sans-ms-text blue-text'>{{matrixCtrl.valToShowInsideCard}}</span>
+			</div>
+		</div>
+		<cell rowIndex='{{count/matrixCtrl.matrix.numberOfCols | floor}}'
+				colIndex='{{count%matrixCtrl.matrix.numberOfCols | floor}}'
+				ng-repeat='count in matrixCtrl.countContainer'></cell>
+	</div>
+	<sliding-window></sliding-window>
+</matrix>
