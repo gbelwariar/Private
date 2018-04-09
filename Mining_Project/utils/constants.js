@@ -1,6 +1,6 @@
 var constants = {
 	firstCellLeft: 100,
-	firstCellTop: 700,
+	firstCellTop: 520,
 	horizontalDistanceBetweenTwoAdjacentCells: 108,
 	verticalDistanceBetweenTwoAdjacentCells: 108
 };
