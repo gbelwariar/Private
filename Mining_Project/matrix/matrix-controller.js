@@ -11,6 +11,7 @@ function MatrixCtrl($stateParams) {
 		this.slidingWindowStatus = 'NOT_STARTED_YET';
 		this.slidingWindow = {};
 		this.matrix = $stateParams.matrix;
+		this.windowSums = [];
 		this.countContainer =
 				getCountContainer($stateParams.matrix.numberOfRows, $stateParams.matrix.numberOfCols);
 	};

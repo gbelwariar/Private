@@ -25,6 +25,7 @@ angular
 										});
 									} else {
 										this.matrixCtrl.valToShowInsideCard = this.slidingWindowObjects[index].val;
+										this.matrixCtrl.windowSums.push(this.slidingWindowObjects[index].val);
 										if (index === 0) {
 											this.matrixCtrl.slidingWindowStatus = 'MOVING';
 											elem.css({
