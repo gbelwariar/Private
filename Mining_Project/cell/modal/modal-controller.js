@@ -1,3 +1,9 @@
+function precisionRound(number, precision) {
+	let factor = Math.pow(10, precision);
+	return Math.round(number * factor) / factor;
+}
+
+
 // Uncomment the 'cellVal' parameter to receive 'cellCtrl.cellVal' from 'CellCtrl'.
 function ModalInstanceCtrl($uibModalInstance/**, cellVal*/) {
 	
@@ -9,7 +15,7 @@ function ModalInstanceCtrl($uibModalInstance/**, cellVal*/) {
 
 
 ModalInstanceCtrl.prototype.ok = function() {
-	let newCellVal = (+this.inputObj.x1) + (+this.inputObj.x2);
+	let newCellVal = precisionRound(+this.inputObj.x1, 3) + precisionRound(+this.inputObj.x2, 3);
 	this.uibModalInstanceService_.close(newCellVal);
 };
 
