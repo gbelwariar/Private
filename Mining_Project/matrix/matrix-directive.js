@@ -11,6 +11,7 @@ angular
 								let matrixCols = +this.matrixCtrl.matrix.numberOfCols;
 								let slidingWindowRows = +this.matrixCtrl.slidingWindow.numberOfRows;
 								let slidingWindowCols = +this.matrixCtrl.slidingWindow.numberOfCols;
+								this.matrixCtrl.windowSums = [];
 								if ((slidingWindowRows > matrixRows) ||
 											(slidingWindowCols > matrixCols)) {
 									alert('Dimenstion of window exceeds that of the original matrix!');
