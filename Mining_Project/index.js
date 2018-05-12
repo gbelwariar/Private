@@ -16,7 +16,9 @@ angular
 					templateUrl: 'matrix/matrix.html',
 					controller: 'MatrixCtrl as matrixCtrl',
 					params: {
-						matrix: {}
+						matrix: {},
+						brr: undefined,
+						bmc: undefined
 					}					
 				})				
 		}]);
