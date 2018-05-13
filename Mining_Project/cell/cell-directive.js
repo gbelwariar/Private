@@ -6,6 +6,8 @@ angular
 						controllerAs: 'cellCtrl',
 						templateUrl: 'cell/cell.html',
 						link: function(scope, elem, attr) {
+							scope.cellCtrl.brr = attr.brr;
+							scope.cellCtrl.bmc = attr.bmc;
 							elem.css({
 								position: "absolute",
 								left: constants.firstCellLeft + attr.colindex*constants.horizontalDistanceBetweenTwoAdjacentCells + "px",	/* Multiplier = width + 8 */

@@ -153,6 +153,10 @@ body {
 	width: 550px;
 }
 
+.width-800px {
+	width: 800px;
+}
+
 input[type=text] {
 	width: 200px;
 	padding: 12px 20px;
@@ -202,4 +206,8 @@ th {
 
 .margin-top-65px {
 	margin-top: 65px;	
+}
+
+.underline {
+	text-decoration: underline;
 }
