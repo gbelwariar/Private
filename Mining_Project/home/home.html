@@ -1,13 +1,13 @@
-<div class='align-text-center card black-background vertical-separator-from-top-90'>
-	<div class='align-text-center font-size-20 white-text'><b>Enter the below details</b></div>			
+<div class='card width-800px black-background vertical-separator-from-top-90'>
+	<div class='underline align-text-center font-size-30 white-text'><b>Enter the below details</b></div>			
 	<form name='matrixDetailsForm'>		
-		<div class='align-text-center'>
+		<div>
 			<div class='vertical-separator-from-top-10'> 
 				<label for="number-of-rows" class='font-size-18 white-text garamond-text'>
 					Number of rows
 				</label>
 				<input name='numberOfRows' id="number-of-rows" type='text'
-						placeholder='Enter an integral value' style='margin-left: 35px' pattern='^\s*\d+\s*$'
+						placeholder='Enter an integral value' style='margin-left: 370px' pattern='^\s*\d+\s*$'
 						ng-required='true' ng-model='homeCtrl.matrix.numberOfRows'/>
 			</div>
 			<div class='vertical-separator-from-top-10'>
@@ -15,10 +15,52 @@
 					Number of columns
 				</label>
 				<input name='numberOfCols' id="number-of-cols" type='text' 
-						placeholder='Enter an integral value' style='margin-left: 3px' pattern='^\s*\d+\s*$'
+						placeholder='Enter an integral value' style='margin-left: 342px' pattern='^\s*\d+\s*$'
 						ng-required='true' ng-model='homeCtrl.matrix.numberOfCols'/>
 			</div>
-			<div>
+			<div class='vertical-separator-from-top-10'>
+				<label for="p" class='font-size-18 white-text garamond-text'>
+					Value of the price of the metal
+				</label>
+				<input name='p' id="p" type='text' style='margin-left: 267px' 
+						ng-required='true' ng-model='homeCtrl.brrParameters.p'/>
+			</div>
+			<div class='vertical-separator-from-top-10'>
+				<label for="Cm" class='font-size-18 white-text garamond-text'>
+					Value of the metal-based cost(processing and refining)
+				</label>
+				<input name='Cm' id="Cm" type='text' style='margin-left: 79px' 
+						ng-required='true' ng-model='homeCtrl.brrParameters.Cm'/>
+			</div>
+			<div class='vertical-separator-from-top-10'>
+				<label for="r" class='font-size-18 white-text garamond-text'>
+					Value of the total proportion of metal recovery from the ore
+				</label>
+				<input name='r' id="r" type='text' style='margin-left: 47px' 
+						ng-required='true' ng-model='homeCtrl.brrParameters.r'/>
+			</div>
+			<div class='vertical-separator-from-top-10'>
+				<label for="v" class='font-size-18 white-text garamond-text'>
+					Value of the volume of the block
+				</label>
+				<input name='v' id="v" type='text' style='margin-left: 249px' 
+						ng-required='true' ng-model='homeCtrl.commonParameters.v'/>
+			</div>
+			<div class='vertical-separator-from-top-10'>
+				<label for="ro" class='font-size-18 white-text garamond-text'>
+					Value of density of the block
+				</label>
+				<input name='ro' id="ro" type='text' style='margin-left: 279px' 
+						ng-required='true' ng-model='homeCtrl.commonParameters.ro'/>
+			</div>	
+			<div class='vertical-separator-from-top-10'>
+				<label for="Core" class='font-size-18 white-text garamond-text'>
+					Value of the ore-based cost(mining of ore)
+				</label>
+				<input name='Core' id="Core" type='text' style='margin-left: 174px' 
+						ng-required='true' ng-model='homeCtrl.bmcParameters.Core'/>
+			</div>				
+			<div class='align-text-center'>
 				<button class="button" ng-click='matrixDetailsForm.$valid && homeCtrl.initiateMatrixGeneration()'
 						ng-disabled='matrixDetailsForm.numberOfRows.$error.required ||
 												matrixDetailsForm.numberOfCols.$error.required'>
